@@ -1,0 +1,319 @@
+/* Results Tabs */
+.results-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 22px;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn {
+    padding: 14px 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+/* Pipeline View */
+.pipeline-view {
+    padding: 10px 0;
+}
+
+.pipeline-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 22px;
+}
+
+.pipeline-steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.pipeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.pipeline-step.completed {
+    border-left: 3px solid var(--accent-success);
+}
+
+.step-number {
+    width: 34px;
+    height: 34px;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.step-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.step-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--bg-secondary);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.step-status {
+    width: 26px;
+    height: 26px;
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--accent-success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.pipeline-connector {
+    width: 2px;
+    height: 16px;
+    background: var(--border-color);
+    margin-left: 32px;
+}
+
+/* Analysis View */
+.analysis-view {
+    padding: 10px 0;
+}
+
+.analysis-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 22px;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.analysis-card {
+    display: flex;
+    gap: 14px;
+    padding: 18px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.analysis-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.analysis-icon {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.analysis-info h5 {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.analysis-value {
+    font-size: 20px;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+}
+
+.analysis-info p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Details Table */
+.analysis-details {
+    margin-bottom: 26px;
+}
+
+.analysis-details h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.details-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.details-table td:first-child {
+    color: var(--text-muted);
+    width: 40%;
+}
+
+.details-table td:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.details-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Method Comparison */
+.analysis-comparison h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 18px;
+}
+
+.comparison-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.method-item.highlight {
+    padding: 12px 16px;
+    background: var(--gradient-card);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: var(--radius-md);
+    margin: 0 -16px;
+}
+
+.method-name {
+    width: 140px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.method-item.highlight .method-name {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.method-bar {
+    flex: 1;
+    height: 10px;
+    background: var(--bg-tertiary);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.method-fill {
+    height: 100%;
+    background: var(--text-muted);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.method-fill.ai {
+    background: var(--gradient-primary);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.method-label {
+    width: 80px;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+    font-weight: 500;
+}
+
+.method-item.highlight .method-label {
+    color: var(--accent-primary);
+}
+
+@media (max-width: 600px) {
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-tabs {
+        overflow-x: auto;
+    }
+}
